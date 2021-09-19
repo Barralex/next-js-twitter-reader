@@ -21,8 +21,8 @@ jobs:
         working-directory: ./.next
         run: zip -r deploy.zip .
       - name: Deploy to EB
-        working-directory: ./.next
         uses: einaregilsson/beanstalk-deploy@v18
+        working-directory: ./.next
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
