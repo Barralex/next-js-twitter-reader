@@ -1,6 +1,7 @@
 name: Continuous Deployment
 on:
-  push: ["main"]
+  push:
+    branches: ["main"]
 jobs:
   deploy-eb:
     runs-on: ubuntu-latest
