@@ -17,6 +17,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: ${{ secrets.AWS_REGION }}
           application_name: ${{ secrets.AWS_EB_APPLICATION_NAME }}
-          environment_name: develop
+          environment_name: Twitterreader-env
           version_label: ${{ github.run_number }}
           deployment_package: deploy.zip
