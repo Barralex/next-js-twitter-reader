@@ -1,0 +1,17 @@
+name: Continuous Integration
+on: [push]
+jobs:
+  Run-Validations:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Check out repository code
+    - uses: actions/checkout@v2
+    - name: Prepare node enviroment
+    - uses: actions/setup-node@v2
+      with:
+        node-version: "14"
+        cache: "yarn"
+    - name: Run Code Validations
+    - run: yarn install
+    - run: yarn lint
+    - run: yarn format:check
